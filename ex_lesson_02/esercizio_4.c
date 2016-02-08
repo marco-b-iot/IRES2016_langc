@@ -1,7 +1,8 @@
 #include <stdio.h>
 
-float media(int a[],int fine){
+float media(int a[]){
     int i;
+    int fine=sizeof(a)/sizeof(int);
     int somma=0;
     for (i=0;i<fine;i++){
         somma+=a[i];

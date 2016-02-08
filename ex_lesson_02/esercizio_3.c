@@ -10,6 +10,6 @@ int somma_dispari(int n){
 }
 
 void main(){
-    int da_sommare[]={1,3,5,6,-1,2};
+
     printf("La somma dei primi %d numeri dispari è %d\n",50,somma_dispari(50));
 }

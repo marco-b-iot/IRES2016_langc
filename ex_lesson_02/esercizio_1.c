@@ -3,7 +3,8 @@
 
 void creaArray(int n[]){
     int i;
-    for (i=0;i<numel;i++){
+    int nel=sizeof(n)/sizeof(int);
+    for (i=0;i<nel/*n[i]!='\0'*/;i++){
         n[i]=numel-i;
     }
 }
@@ -11,10 +12,12 @@ void creaArray(int n[]){
 void main (){
     int a[numel];
     int i;
+    int nelem=sizeof(a)/sizeof(int);
+
     creaArray(a);
     printf("Array: ");
-    for (i=0;i<numel;i++){
-        printf("%d ",a[i]);
+    for (i=0;i<nelem;i++){
+        printf("%d ",a[i]);t
     }
     printf("\n");
 
