@@ -3,8 +3,8 @@
 int somma_dispari(int n){
     int i=0;
     int somma=0;
-    for (i=1;i<=n;i+=2){
-        somma+=i;
+    for (i=0;i<n;i++){
+        somma+=2*i+1;
     }
     return somma;
 }
