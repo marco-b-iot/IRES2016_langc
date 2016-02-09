@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include "esercizio_6.h"
+
+//gcc -c nomefile_sor
 
 int moltiplica(int a,int b){
     int mul=0,min,i;
@@ -30,13 +31,11 @@ int moltiplica_rec(int a, int b){
 
 
 }
-
-int esercizio_6(){
-    int a,b;
-    //printf("Dammi i valori");
-    //scanf("%d %d",&a, &b);
-    printf("%d ",moltiplica(3,5));
-    return 0;
-
-    //printf("La moltiplicazione è %d\n",moltiplica_rec(a,b));
-}
+//
+//void main(){
+//    int a,b;
+//    printf("Dammi i valori");
+//    scanf("%d %d",&a, &b);
+//    printf("La moltiplicazione è %d\n",moltiplica(a,b));
+//    printf("La moltiplicazione è %d\n",moltiplica_rec(a,b));
+//}

@@ -1,11 +1,10 @@
 #include <stdio.h>
 
-int somma(int a[]){
+int somma(int* a,int fine){
     int i=0, somma=0;
-    int fine=sizeof(a)/sizeof(int);
-    for (int i=0;i<fine;i++){
+    for (i=0;i<fine;i++){
         if (a[i]>=0)
-            somma+=a[i];
+            somma+=*(a+i);
         else
             break;
     }
@@ -17,8 +16,9 @@ int somma(int a[]){
     return somma;
 }
 
-void main(){
+int esercizio_2(){
 
     int da_sommare[]={1,3,5,6,-1,2};
-    printf("Somma= %d\n",somma(da_sommare,5));
+    printf("%d ",somma(da_sommare,5));
+    return 0;
 }

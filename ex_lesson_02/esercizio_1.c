@@ -1,24 +1,22 @@
 #include <stdio.h>
-#define numel 20
+#include "common.h"
 
-void creaArray(int n[]){
+void creaArray(int* n,int len){
     int i;
-    int nel=sizeof(n)/sizeof(int);
-    for (i=0;i<nel/*n[i]!='\0'*/;i++){
-        n[i]=numel-i;
+    for (i=0;i<len;i++){
+        n[i]=len-i;
     }
+
 }
 
-void main (){
-    int a[numel];
+int esercizio_1 (){
+    int a[20];
     int i;
-    int nelem=sizeof(a)/sizeof(int);
 
-    creaArray(a);
-    printf("Array: ");
-    for (i=0;i<nelem;i++){
-        printf("%d ",a[i]);t
-    }
-    printf("\n");
+    creaArray(a,20);
+
+    stampa(a,20);
+
+    return 0;
 
 }

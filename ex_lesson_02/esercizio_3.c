@@ -9,7 +9,9 @@ int somma_dispari(int n){
     return somma;
 }
 
-void main(){
+int esercizio_3(){
 
-    printf("La somma dei primi %d numeri dispari è %d\n",50,somma_dispari(50));
+    printf("%d ",somma_dispari(50));
+    return 0;
+
 }

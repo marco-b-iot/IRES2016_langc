@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include "esercizio_6.h"
+#include "mult.h"
+
 
 
 int pot(int a, int b){
@@ -20,11 +21,10 @@ int pot_rec(int a,int b){
     }else
         return a*pot_rec(a, b-1);
 }
-int esercizio_7(){
-    int a=3,b=5;
-    //printf("Dammi i valori");
-    //scanf("%d %d",&a, &b);
-    printf("%d ",pot_rec(a,b));
-    return 0;
 
+void main(){
+    int a,b;
+    printf("Dammi i valori");
+    scanf("%d %d",&a, &b);
+    printf("%d^%d è %d\n",a,b,pot_rec(a,b));
 }

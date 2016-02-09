@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define numel 20
+#include "common.h"
 
 void dividi(int* a, int* b,int len){
     int ai,bi=0;
@@ -29,27 +29,20 @@ void dividi2(int* a, int* b,int len){
     }
 }
 
-void stampa(int* a,int len){
-    int i;
-    for (i=0;i<len;i++){
-            printf("%d ",a[i]);
-        }
-    printf("\n");
-
-}
-void main (int argc, int* argv){
+int esercizio_11(int argc, int* argv){
 
     int a[]={2,4,7,3,2,9,5};
     int b[7],b1[7];
     //a=(int *)malloc(sizeof(int)*rip);
     dividi(a,b1,7);
     dividi2(a,b,7);
-    stampa(a,7);
-    printf( "\n");
+    //stampa(a,7);
+    //printf( "\n");
     stampa(b,7);
-    printf( "\n");
+
     stampa(b1,7);
-    printf( "\n");
+
+    return 0;
 
 
 }

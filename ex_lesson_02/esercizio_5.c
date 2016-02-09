@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int somma(int a,int b){
+int somma_intervallo(int a,int b){
     int somma,min,i;
 
     min=(a<b)?a:b;
@@ -12,9 +12,13 @@ int somma(int a,int b){
     return somma;
 }
 
-void main(){
-    int a,b;
-    printf("Dammi gli estremi");
+int esercizio_5(){
+    int a=2,b=8;
+    printf("%d ",somma_intervallo(a,b));
+    return 0;
+
+
+    /*printf("Dammi gli estremi");
     scanf("%d %d",&a, &b);
-    printf("La somma è %d\n",somma(a,b));
+    printf("La somma è %d\n",somma(a,b));*/
 }
