@@ -5,6 +5,7 @@
 
 int main() {
 	Person m,m1,m2;
+	char c[10]="";
 
 	Person_setName(&m, "Marione"); // m.setName("Mario"); in OO
 	Person_setSurname(&m, "Rossignol");
@@ -28,17 +29,16 @@ int main() {
     Azienda_addPerson(&az,m1);
 	Azienda_addPerson(&az,m2);
 
-	Azienda_stampaBigliettiTimbro(&az);
+	//Azienda_stampaBigliettiTimbro(&az);
 
     printf("\nCancelliamo qualcuno:\n");
 	Azienda_delPerson(&az,m);
-    Azienda_stampaBigliettiTimbro(&az);
 
+	char ret[100];
+    Azienda_getBigliettiTimbro(&az,ret,100);
 
+    printf("/n%s/n",ret);
 
-
-//	Temperature x = 5;
-//	printf("Ciao %d\n", x);
 
 	return EXIT_SUCCESS;
 }

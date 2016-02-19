@@ -11,7 +11,7 @@ void Person_setName(Person* this, char* name) ;
 
 void Person_setSurname(Person* this, char* surname) ;
 // restituisce il nome e cognome
-void Person_getBigliettoDaVisita(Person* this, char* bv) ;
+void Person_getBigliettoDaVisita(Person* this, char* bv,int l_bv) ;
 
 
 #endif // PERSON_H_INCLUDED

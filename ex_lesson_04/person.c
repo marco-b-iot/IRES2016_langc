@@ -1,26 +1,8 @@
 #include <stdio.h>  // define printf
 #include <stdlib.h> // define EXIT_SUCCESS
 #include <string.h>
-/*
-struct Person {
-	char name[20];
-	char surname[20];
-	int age;
+#include "person.h"
 
-};*/
-
-typedef struct {
-	char name[20];
-	char surname[20];
-	int age;
-
-/* ex c++ (NON C)
-	void setName(char* name) {
-		//strcpy((*person).name, name);
-		strcpy(this->name, name);
-	}
-*/
-} Person;
 
 void Person_setName(Person* this, char* name) {
 	//strcpy((*this).name, name);
@@ -40,10 +22,11 @@ void Person_setSurname(Person* this, char* surname) {
 }
 
 // restituisce il nome e cognome
-void Person_getBigliettoDaVisita(Person* this, char* bv) {
-	strcpy(bv, this->name);
-	strcat(bv, " ");
-	strcat(bv, this->surname);
+void Person_getBigliettoDaVisita(Person* this, char* bv, int l_bv) {
+	strncpy(bv, this->name,l_bv);
+	strncat(bv, " ",l_bv);
+	strncat(bv, this->surname,l_bv);
+	bv[l_bv-1]='\0';
 }
 
 //typedef float Temperature;
