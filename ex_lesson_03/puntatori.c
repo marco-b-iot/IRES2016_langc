@@ -7,6 +7,7 @@ void swap(int* a,int* b){
     *b=temp;
 }
 int main(){
+    /*
     int a=5;
     int* pa;
     pa=&a;
@@ -20,6 +21,10 @@ int main(){
     swap(&x,&y);
 
     printf("x == %d\n",x);
-    printf("y == %d\n",y);
+    printf("y == %d\n",y);*/
+    int a[]={10,12,34,54,6,1,-1};
+    void *p = a; //nb non ha senso incrementare un void *
+    float *f = p;
+    printf("%f", *f);
 
 }
