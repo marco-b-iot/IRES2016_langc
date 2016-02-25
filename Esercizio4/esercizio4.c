@@ -16,7 +16,7 @@ typedef struct{
 
 void setName(Software *s, char *name){
 
-    s->name=malloc(strlen(name));
+    s->name=malloc(strlen(name)+1);
     strcpy(s->name, name);
 }
 
@@ -55,7 +55,7 @@ int main(){
     buf=malloc(10000);
     for (i=0;i<100000;i++){
         getName(&a[i],buf);
-        printf("%s %d",buf, getVersion(&a[i]));
+        printf("%s \n",getVersion(&a[i]));
     }
 
     exit(0);
