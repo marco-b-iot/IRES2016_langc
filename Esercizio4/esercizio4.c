@@ -20,9 +20,9 @@ void setName(Software *s, char *name){
     strcpy(s->name, name);
 }
 
-char* getName(Software *s, char *retbuf){
+void getName(Software *s, char *retbuf, int len){
 
-    int len=strlen(retbuf);
+    //int len=strlen(retbuf);
     strncpy(retbuf, s->name, len);
     retbuf[len+1]='\0';
 }
@@ -46,16 +46,15 @@ int main(){
 
     a=malloc(sizeof(Software)*LUNARRAY);
 
-    for (i=0;i<100000;i++){
+    for (i=0;i<LUNARRAY;i++){
         sprintf(buf,"SW%d",i);
         setName(&a[i],buf);
         setVersion(&a[i], i);
     }
 
-    buf=malloc(10000);
-    for (i=0;i<100000;i++){
-        getName(&a[i],buf);
-        printf("%s \n",getVersion(&a[i]));
+    for (i=0;i<LUNARRAY;i++){
+        getName(&a[i],buf,50);
+        printf("%s %d\n", buf, a[i].version);
     }
 
     exit(0);
