@@ -53,9 +53,11 @@ int main(){
     }
 
     for (i=0;i<LUNARRAY;i++){
-        getName(&a[i],buf,50);
+        getName(&a[i],buf,50-1);
         printf("%s %d\n", buf, a[i].version);
     }
+    free(a);
+    free(buf);
 
     exit(0);
 }
