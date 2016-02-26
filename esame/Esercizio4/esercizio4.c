@@ -3,6 +3,10 @@ Creare una struttura Studente caratterizzata da un nome, cognome e dal numero di
 Implementare le funzioni setCognome, getCognome, setNumeroEsami e getNumeroEsami che ne impostano e
 restituiscano rispettivamente il cognome e il numero di esami dello studente.
 Nota: non porrere limiti alla lunghezza del cognome.
+
+Il voto è il numero dello studente modulo 10 (studente i-esimo ha voto i%10).
+PS. la funzione sprintf(char* buf, “%d”, i) permette di trasformare un intero in una stringa (buf contiene la stringa rappresentante l’intero i.
+Calcolare la somma dei voti degli studenti.
 */
 
 
@@ -53,13 +57,13 @@ int main(){
     //alloco spazio per l'array di studenti
     studenti=malloc(sizeof(Studente)*LUNARRAY);
     if (!studenti){
-        //studenti troppo grande
+        //studenti troppo grande esco
         return 1;
     }
 
     //riempio l'array usando le funzioni già definite
     for (i=0;i<LUNARRAY;i++){
-        sprintf(buf,"Studente%d",i);
+        sprintf(buf,"Studente_%d",i);
         setCognome(&studenti[i], buf);
         setVoto(&studenti[i], i%10);
     }
@@ -68,9 +72,10 @@ int main(){
     for (i=0;i<LUNARRAY;i++){
         sommavoti+=getVoto(&studenti[i]);
 
-        /*
+        /* print dell'intero array per test
         getCognome(&studenti[i], buf, 50-1);
-        printf("%s %d\n", buf, studenti[i].voto);*/
+        printf("%s %d\n", buf, studenti[i].voto);
+        */
     }
     printf("%d\n",sommavoti);
 
