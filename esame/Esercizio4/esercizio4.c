@@ -65,6 +65,7 @@ int main(){
 
     //riempio l'array usando le funzioni già definite
     for (i=0;i<LUNARRAY;i++){
+        //gli studenti partono da 0
         sprintf(buf,"Studente_%d",i+1);
         setCognome(&studenti[i], buf);
         setVoto(&studenti[i], (i+1)%10);
