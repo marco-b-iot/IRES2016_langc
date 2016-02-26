@@ -74,10 +74,10 @@ int main(){
     //calcolo la somma dei voti leggendoli tramite getVoto
     for (i=0;i<LUNARRAY;i++){
         sommavoti+=getVoto(&studenti[i]);
-
+        /*
         //print dell'intero array
-        getCognome(&studenti[i], buf, 50-1/*lung della stringa non dell'array*/);
-        printf("%s %d\n", buf, studenti[i].voto);
+        getCognome(&studenti[i], buf, 50-1);
+        printf("%s %d\n", buf, studenti[i].voto);*/
 
     }
     printf("%d\n",sommavoti);
