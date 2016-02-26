@@ -34,8 +34,10 @@ void setCognome(Studente *s, char *cognome){
 }
 
 void getCognome(Studente *s, char *buf, int len){
+    //lunghezza della stringa quindi escluso il \0
     //copio la stringa cognome di studente nel buffer limitatamente a len
     strncpy(buf, s->cognome, len);
+    //per sicurezza termino la stringa
     buf[len+1]='\0';
 }
 
@@ -73,7 +75,7 @@ int main(){
         sommavoti+=getVoto(&studenti[i]);
 
         /* print dell'intero array per test
-        getCognome(&studenti[i], buf, 50-1);
+        getCognome(&studenti[i], buf, 50-1//la lung della stringa non dell'array);
         printf("%s %d\n", buf, studenti[i].voto);
         */
     }
