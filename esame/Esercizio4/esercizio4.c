@@ -65,19 +65,19 @@ int main(){
 
     //riempio l'array usando le funzioni già definite
     for (i=0;i<LUNARRAY;i++){
-        sprintf(buf,"Studente_%d",i);
+        sprintf(buf,"Studente_%d",i+1);
         setCognome(&studenti[i], buf);
-        setVoto(&studenti[i], i%10);
+        setVoto(&studenti[i], (i+1)%10);
     }
 
     //calcolo la somma dei voti leggendoli tramite getVoto
     for (i=0;i<LUNARRAY;i++){
         sommavoti+=getVoto(&studenti[i]);
 
-        /* print dell'intero array
-        getCognome(&studenti[i], buf, 50-1//la lung della stringa non dell'array);
+        //print dell'intero array
+        getCognome(&studenti[i], buf, 50-1/*lung della stringa non dell'array*/);
         printf("%s %d\n", buf, studenti[i].voto);
-        */
+
     }
     printf("%d\n",sommavoti);
 
