@@ -9,7 +9,7 @@ int moltiplica(int m1, int m2){
     //per limitare le somme calcolo il minimo
     min=(m1<m2)?m1:m2;
     max=(m1>m2)?m1:m2;
-    //per min volte sommo il max
+    //per min volte sommo il max in mul
     for (;min>0;--min){
         mul=somma(mul,max);
     }

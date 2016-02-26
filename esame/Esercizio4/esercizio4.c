@@ -74,7 +74,7 @@ int main(){
     for (i=0;i<LUNARRAY;i++){
         sommavoti+=getVoto(&studenti[i]);
 
-        /* print dell'intero array per test
+        /* print dell'intero array
         getCognome(&studenti[i], buf, 50-1//la lung della stringa non dell'array);
         printf("%s %d\n", buf, studenti[i].voto);
         */
